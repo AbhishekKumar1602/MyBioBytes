@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+:root {
+  --accent: #6c8cff;
+  --accent-2: #8be9a8;
+  --footer-height: 4rem;
+}
+
+body {
+  @apply bg-slate-900 text-slate-100 antialiased;
+  padding-bottom: calc(var(--footer-height) + env(safe-area-inset-bottom));
+}
+
+.container {
+  @apply max-w-5xl mx-auto px-6;
+}
+
+.site-header {
+  @apply sticky top-0 bg-slate-900/70 backdrop-blur z-40 border-b border-slate-800;
+}
+
+.brand {
+  @apply font-bold text-lg;
+}
+
+.nav-list {
+  @apply flex gap-4 items-center;
+}
+
+.nav-link {
+  @apply text-slate-300 hover:text-white;
+}
+
+.btn {
+  @apply inline-block px-4 py-2 rounded-md font-semibold;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  color: #07101a;
+}
+
+.card {
+  @apply bg-slate-800 rounded-lg p-4 shadow;
+}
+footer {
+  height: var(--footer-height);
+}
